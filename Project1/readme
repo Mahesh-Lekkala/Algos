@@ -1,0 +1,65 @@
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Student Name:			Maheswara Rao Lekkala
+UNCC ID:				801167702
+Programming language: 	java (Version : "1.8.0_241")
+Compiler version: 		java version "1.8.0_92"
+Algorithm:				Lempel–Ziv–Welch (LZW)
+Files: 					lzwEncoder.java and lzwDecoder.java
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Description:
+	Lempel–Ziv–Welch (LZW) algorithm works for compressing and decompressing the data in a lossless manner. it works
+	best when there is some redundancy in data.Here we are implementing the algorithm with some practical 
+	usecases of encoding and decoding the strings that have redundancy.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+Getting Started:	
+	This program requires user inputting text file name(For Encoder)/lzw file name(For Decoder) and bit length 
+	through command line as arguments while running java files.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Encoding:
+	The input data is encoded using the lzwEncoder.java file
+	Input text file is readed through taking the first String Array value(it is an argument to main method of lzwEncoder.java file)
+	A HashMap is initialized to store the dictionary values.
+	In the HashMap, key are ascii numbers and values are the ascii values
+	The lzw compression algorithm is applied and we get the compressed data,
+	The program outputs the compressed data and stores it to an output file (file name: appended .lzw to the input file name instead .txt)
+	
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Decoding:
+	The compressed data is decompressed using the lzwDecoder.java file
+	Input lzw file is readed through taking the first String Array value(it is an argument to main method of lzwDecoder.java file)
+	A HashMap is initialized to store the dictionary values.
+	In the HashMap, key are ascii numbers and values are the ascii values
+	The lzw decompression algorithm is applied and we get the decompressed data,
+	the program outputs the decompressed data and stores it to an output file (file name: appended _Decoded.txt to the input file name instead .lzw)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+How to run the file:
+	1. Open the command window.
+	2. Set the current directory to the location where the file is present.
+	3. Compile all source files using following command : javac *.java
+	3. To encode, type: 
+		-	javac lzwEncoder.java <inputFileName.txt> <number of Bits>
+	
+	4. To decode, type:
+		-	javac lzwDecoder.java <inputFileName.txt> <number of Bits>
+	
+	The compressed file will be stored as inputFileName.lzw and the output 
+	file will be stored as inputFileName_decoded.txt
+	
+----------------------------------------------------------------------------------------------------------------------------------------------------------	
+Algorithm Efficiency:
+	The program works well with both the examples provided on canvas, 
+	for other data the efficiency depends on the the repeating data values
+	and the size of data.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
